@@ -1,4 +1,4 @@
-rootProject.name = 'spring-cloud-training'
+rootProject.name = 'spring-cloud-aws-training'
 
 include 'configuration'
 include 'sql'
