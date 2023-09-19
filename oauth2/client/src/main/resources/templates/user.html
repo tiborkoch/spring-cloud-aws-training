@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Customers</title>
+</head>
+<body>
+
+<h1>User</h1>
+
+<p th:replace="~{fragments/menu.html :: p}"></p>
+
+Email address:
+<p th:text="${#authentication.principal.email}"></p>
+
+Groups:
+<p th:text="${#authentication.principal.getAttributes().get('cognito:groups')}"></p>
+
+Authorities:
+<p th:text="${#authentication.principal.authorities}"></p>
+
+
+</body>
+</html>

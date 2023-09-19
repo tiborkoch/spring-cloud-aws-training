@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+    hikari:
+      connection-timeout: 60000
+      idle-timeout: 60000
+      maximum-pool-size: 5
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Ymj86mx6S
+          jwk-set-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Ymj86mx6S/.well-known/jwks.json
+
+logging:
+  level:
+    io.awspring.cloud: debug
+    org.springframework.security: DEBUG

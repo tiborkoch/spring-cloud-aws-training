@@ -1,0 +1,19 @@
+spring:
+  datasource:
+#    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+    hikari:
+      connection-timeout: 60000
+      idle-timeout: 60000
+      maximum-pool-size: 5
+  cloud:
+    refresh:
+      enabled: true
+    aws:
+      credentials:
+        profile:
+          name: 606996215161_PowerUserAccess
+      parameterstore:
+        reload:
+          strategy: refresh

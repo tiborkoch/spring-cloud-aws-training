@@ -1,0 +1,47 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+    hikari:
+      connection-timeout: 60000
+      idle-timeout: 60000
+      maximum-pool-size: 5
+  jpa:
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            client-id: h5hbsd9hp7j6mu59sjnt2e6nv
+            client-secret: drpba41sprmq4kalnse626hcoee4f2amcrg4o0vtm7cjqffq03c
+            scope: openid, email, phone
+            redirect-uri: http://localhost:8080/login/oauth2/code/cognito
+            client-name: cloud-training
+            authorization-grant-type: authorization_code
+        provider:
+          cognito:
+            issuer-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_Ymj86mx6S
+
+logging:
+  level:
+    cloud.training: debug
+    io.awspring.cloud: debug
+    org.springframework.security: DEBUG
+
+aws:
+  cognito:
+    logout-url: https://cloud-training.auth.us-east-1.amazoncognito.com/logout
+    logout:
+      success:
+        redirect-url: http://localhost:8080
