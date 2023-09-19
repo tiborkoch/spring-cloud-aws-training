@@ -48,12 +48,14 @@ AWS Parameter Store
 - https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html
 
 AWS Secrets Manager
+- https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html
 - https://levelup.gitconnected.com/using-aws-parameter-store-and-secret-manager-with-spring-boot-b8344bd49305 (Se)
 
 ### 2. SQL
 **We'll use the `sql` project.**
 
 AWS RDS:
+- https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.html
 - https://blackninjasoft.com/blog/adding-a-database-to-your-rails-application-on-elastic-beanstalk-using-rds
 - https://repost.aws/questions/QUf7DbNMKFQmWiRg8oMB0obA/why-must-an-rds-always-have-two-subnets
 
@@ -80,10 +82,12 @@ AWS DynamoDB
 **We'll use the `observability` project.**
 
 AWS CloudWatch
+- https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html
 - https://mehmetozkaya.medium.com/monitor-spring-boot-custom-metrics-with-micrometer-and-prometheus-using-docker-62798123c714
 - https://reflectoring.io/spring-aws-cloudwatch/
 
 AWS X-Ray
+- https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html
 - https://github.com/anthunt/spring-boot-aws-xray-sample
 - https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-java-aop-spring.html
 
@@ -98,6 +102,7 @@ AWS Elasticache
 **We'll use the `blob` project.**
 
 AWS S3
+- https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html
 - https://medium.com/javarevisited/spring-boot-with-aws-s3-bucket-from-zero-to-useful-c0895ab26aaa
 
 ### 7. OAuth2 
@@ -113,5 +118,7 @@ AWS Cognito
 **We'll use the `messaging/producer` and `messaging/consumer` projects.**
 
 AWS SQS/SNS
+- https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html
+- https://docs.aws.amazon.com/sns/latest/dg/welcome.html
 - https://spring.io/projects/spring-cloud-stream
 - https://ably.com/topic/aws-sns-vs-sqs
